@@ -1,0 +1,20 @@
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin d-flex($flex, $justify-content){
+  display: $flex;
+  justify-content: $justify-content;
+}
+
+@mixin center-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font-style($font-style, $size) {
+  font-family: $font-style;
+  font-size: $size;
+}

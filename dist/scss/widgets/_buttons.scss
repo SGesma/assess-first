@@ -1,0 +1,27 @@
+.btn {
+  @include font-style($font-roboto-regular, $font14);
+  font-weight: bold;
+  letter-spacing: .1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  &:active {
+    outline: 0;
+    border: none;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &.btn-primary {
+    height: 4rem;
+    min-width: 13.6rem;
+    background-color: $pink;
+    color: $white;
+  }
+}
+

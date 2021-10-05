@@ -1,0 +1,243 @@
+/*!------------------------------------------------------
+ * IMPORT SCSS FILES
+---------------------------------------------------------*/
+/*!------------------------------------------------------
+ * COLORS
+---------------------------------------------------------*/
+/*!------------------------------------------------------
+ * FONT STYLE
+---------------------------------------------------------*/
+/*!------------------------------------------------------
+ * MEDIA QUERY
+---------------------------------------------------------*/
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../../fonts/roboto/Roboto-Regular.ttf");
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../../fonts/roboto/Roboto-Medium.ttf");
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../../fonts/roboto/Roboto-Bold.ttf");
+  font-style: normal; }
+@font-face {
+  font-family: "Opensans Regular";
+  src: url("../../fonts/opensans/OpenSans_Condensed-Regular.ttf");
+  font-style: normal; }
+@font-face {
+  font-family: "Opensans Medium";
+  src: url("../../fonts/opensans/OpenSans_Condensed-Medium.ttf");
+  font-style: normal; }
+@font-face {
+  font-family: "Opensans Bold";
+  src: url("../../fonts/opensans/OpenSans_Condensed-Bold.ttf");
+  font-style: normal; }
+@font-face {
+  font-family: "Opensans Extrabold";
+  src: url("../../fonts/opensans/OpenSans_Condensed-ExtraBold.ttf");
+  font-style: normal; }
+* {
+  color: inherit;
+  font-family: inherit;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 1.4rem;
+  color: #666666;
+  overflow-y: hidden;
+  margin: 0; }
+
+li {
+  list-style: none; }
+  li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+.main__content-title,
+.footer__list-title {
+  font-family: "Opensans Extrabold", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+input {
+  outline: none;
+  border: none;
+  cursor: pointer; }
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 6.8rem 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+  min-height: 100vh; }
+
+.header {
+  grid-area: header; }
+
+.main {
+  grid-area: main; }
+  .main__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 6.6rem 12rem 0 12rem; }
+
+.footer {
+  grid-area: footer; }
+
+.header,
+.header__content,
+.header__content-left {
+  display: flex; }
+
+.header {
+  align-items: center;
+  border-bottom: 1px solid #DEDEDE; }
+  .header__search-bar {
+    align-self: center;
+    position: relative;
+    margin-left: 3rem;
+    padding: .4rem; }
+    .header__search-bar .icon-search {
+      position: absolute;
+      top: 30%;
+      left: 7%;
+      color: #B7B7B7;
+      font-size: 2rem; }
+    .header__search-bar input {
+      width: 22.7rem;
+      height: 4rem;
+      padding-left: 4rem;
+      border-radius: 5rem;
+      border: 1px solid #B7B7B7; }
+      .header__search-bar input::placeholder {
+        color: #666666;
+        font-size: 1.4rem; }
+  .header__content {
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 2rem; }
+  .header__navigation {
+    display: flex;
+    column-gap: 4em; }
+    @media screen and (max-width: 991px) {
+      .header__navigation {
+        display: none; } }
+  .header__items:hover, .header__items:active, .header__items:focus {
+    font-weight: bold; }
+  .header__link:hover, .header__link:active, .header__link:focus {
+    padding-bottom: 2.3rem;
+    border-bottom: 0.5rem solid #A6D342; }
+  .header__content-right {
+    display: flex;
+    align-items: center;
+    column-gap: 3.8rem; }
+  @media screen and (max-width: 991px) {
+    .header__avatar {
+      display: none; } }
+
+.notification {
+  position: relative; }
+  .notification__badge {
+    display: block;
+    position: absolute;
+    top: 21px;
+    right: -7px;
+    border-radius: 50%;
+    padding: .2rem .5rem;
+    background: #FF0080;
+    color: #ffffff;
+    font-size: 8px;
+    text-align: center; }
+
+.footer {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 4rem 12rem; }
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 21.8rem; }
+    @media screen and (max-width: 991px) {
+      .footer__container {
+        justify-content: center;
+        align-items: center; } }
+  .footer__list {
+    display: flex;
+    flex-direction: column; }
+    @media screen and (max-width: 991px) {
+      .footer__list {
+        margin: 0 0 5rem 4rem; } }
+    @media screen and (max-width: 991px) {
+      .footer__list:first-child {
+        margin-right: 5rem; } }
+    .footer__list:last-child {
+      padding-top: 2rem; }
+    .footer__list .grey-logo {
+      height: 6rem;
+      width: 22.7rem; }
+  .footer__list-container {
+    padding: 0; }
+  .footer__list-items:first-child {
+    margin-bottom: 1rem; }
+  .footer__list-links {
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 2rem; }
+    .footer__list-links:hover, .footer__list-links:active, .footer__list-links:focus {
+      color: #FF0080; }
+  .footer__social-media {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 2rem;
+    font-size: 2.4rem;
+    font-weight: bolder; }
+
+.btn {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  outline: none;
+  border: none; }
+  .btn:active {
+    outline: 0;
+    border: none; }
+  .btn:focus {
+    outline: 0;
+    box-shadow: none; }
+  .btn.btn-primary {
+    height: 4rem;
+    min-width: 13.6rem;
+    background-color: #FF0080;
+    color: #ffffff; }
+
+.menu-burger {
+  display: none; }
+  @media screen and (max-width: 991px) {
+    .menu-burger {
+      display: block; } }
+  @media screen and (max-width: 991px) {
+    .menu-burger__line {
+      width: 2.9rem;
+      height: .5rem;
+      background-color: #bbbbbb;
+      margin: .4rem 0;
+      border-radius: 5rem; } }
+
+/*# sourceMappingURL=style.css.map */
